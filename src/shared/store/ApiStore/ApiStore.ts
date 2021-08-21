@@ -7,11 +7,20 @@ export default class ApiStore implements IApiStore {
     this.baseUrl = baseUrl;
   }
 
-  request<SuccessT, ErrorT = any, ReqT = {}>(params: RequestParams<ReqT>): Promise<ApiResponse<SuccessT, ErrorT>> {
-    const url = `${this.baseUrl}/orgs/${orgName}/repos`
+  async request<SuccessT, ErrorT = any, ReqT = {}>(params: RequestParams<ReqT>): Promise<ApiResponse<SuccessT, ErrorT>> {
+    const qs = require('qs');
+    const query = qs.stringify(params.data);
+    const url = `${this.baseUrl}/${params.endpoint}/${query}`
     try {
-      const response = await fetch(url);
+      const response = await fetch(url,{
+        method: 'GET',
+        // method: params.method,
+        // headers: params.headers,
+        // data: params.data
+      });
+      console.log('response', response)
       const data = await response.json();
+      console.log('data', data)
       return {
         success: true,
         data,
@@ -20,10 +29,9 @@ export default class ApiStore implements IApiStore {
     } catch (e) {
       return {
         success: false,
-        data,
+        data: e.response.data,
         status: e.response.status
       };
     }
-
   }
 }

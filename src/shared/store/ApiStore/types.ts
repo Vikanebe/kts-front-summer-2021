@@ -1,12 +1,9 @@
 
 // Перечисление методов HTTP-запроса
-enum HTTPMethod {
+export enum HTTPMethod {
   // TODO: заполнить
-  POST ,
-  GET,
-  DELETE,
-  PATCH,
-  PUT
+  POST = 0 ,
+  GET = 1,
 }
 
 // Параметры запроса
@@ -26,8 +23,8 @@ export type RequestParams<ReqT> = {
 // Перечисление статусов ответа
 enum StatusHTTP {
   // TODO: заполнить
-  200,
-  500
+  ok = 200,
+  serverError = 500,
 }
 
 // Ответ API

@@ -7,6 +7,6 @@ const EXAMPLE_ORGANIZATION = 'ktsstudio';
 gitHubStore.getOrganizationReposList({
   organizationName: EXAMPLE_ORGANIZATION
 }).then(result => {
-  console.log(result); // в консоли появится список репозиториев в ktsstudio
+  console.log('result root',result); // в консоли появится список репозиториев в ktsstudio
 })
 
