@@ -67,4 +67,4 @@ const RepositoriesList = () => (
   </div>
 )
 
-export default RepositoriesList;
+export {RepositoriesList};
