@@ -12,7 +12,7 @@ const RepositoriesList = () => (
           placeholder="Введите название организации"
         />
         <div className="search-form_search-button">
-          <img src="/search.svg"/>
+          <img src="img/search.svg"/>
         </div>
       </form>
 
@@ -25,7 +25,7 @@ const RepositoriesList = () => (
           </div>
           <a className="git-repo-card_info_link" href="">ktsStudio</a>
           <div className="rating">
-            <img src="/star.svg" className="rating_star"/>
+            <img src="img/star.svg" className="rating_star"/>
             <div className="rating_voice">123</div>
             <div className="rating_update">Updating 21June</div>
           </div>
@@ -41,7 +41,7 @@ const RepositoriesList = () => (
           </div>
           <a className="git-repo-card_info_link" href="">ktsStudio</a>
           <div className="rating">
-            <img src="/star.svg" className="rating_star"/>
+            <img src="img/star.svg" className="rating_star"/>
             <div className="rating_voice">123</div>
             <div className="rating_update">Updating 21June</div>
           </div>
@@ -57,7 +57,7 @@ const RepositoriesList = () => (
           </div>
           <a className="git-repo-card_info_link" href="">ktsStudio</a>
           <div className="rating">
-            <img src="/star.svg" className="rating_star"/>
+            <img src="img/star.svg" className="rating_star"/>
             <div className="rating_voice">123</div>
             <div className="rating_update">Updating 21June</div>
           </div>

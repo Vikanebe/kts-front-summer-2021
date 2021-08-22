@@ -1,4 +1,4 @@
-import {ApiResponse, IApiStore, RequestParams} from "./types";
+import {ApiResponse, HTTPMethod, IApiStore, RequestParams} from "./types";
 
 export default class ApiStore implements IApiStore {
   readonly baseUrl: string;
@@ -9,22 +9,25 @@ export default class ApiStore implements IApiStore {
 
   async request<SuccessT, ErrorT = any, ReqT = {}>(params: RequestParams<ReqT>): Promise<ApiResponse<SuccessT, ErrorT>> {
     const qs = require('qs');
-    const query = qs.stringify(params.data);
-    const url = `${this.baseUrl}/${params.endpoint}/${query}`
+    let query = '';
+    let body = null;
+
+    if (params.method === HTTPMethod.GET) {
+      query = qs.stringify(params.data);
+    }
+    if (params.method === HTTPMethod.POST) {
+      body = JSON.stringify(params.data);
+    }
+
+    const url = `${this.baseUrl}/${params.endpoint}?${query}`
+
     try {
-      const response = await fetch(url,{
-        method: 'GET',
-        // method: params.method,
-        // headers: params.headers,
-        // data: params.data
-      });
-      console.log('response', response)
+      const response = await fetch(url, {...params, body});
       const data = await response.json();
-      console.log('data', data)
       return {
         success: true,
         data,
-        status: 200
+        status: response.status
       };
     } catch (e) {
       return {
