@@ -1,15 +1,15 @@
-import React from 'react';
+import React from "react";
 
-import {RepositoriesList} from "./layouts/RepositoriesList";
+import { RepositoriesList } from "./layouts/RepositoriesList";
 
-import './App.css';
+import "./App.css";
 
 const App = () => {
   return (
     <div>
-      <RepositoriesList/>
+      <RepositoriesList />
     </div>
   );
-}
+};
 
 export default App;
