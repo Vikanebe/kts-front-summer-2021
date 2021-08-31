@@ -1,0 +1,117 @@
+.repositories-list {
+    width: 400px;
+    margin: 0 auto;
+}
+
+.container {
+    display: grid;
+    grid-row-gap: 16px;
+    padding: 20px;
+}
+
+.search-form {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.search-form_input {
+    box-sizing: border-box;
+    outline: none;
+    width: 300px;
+    padding: 17px 12px;
+    border-radius: 6px;
+    border: 1px solid #7E7E7E;
+}
+
+.search-form_input:focus {
+    border: 1px solid #FF5555;
+}
+
+.search-form_input:disabled {
+    border: 1px solid #D9D9D9;
+}
+
+.search-form_search-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    background-color: #FF5555;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.search-form_search-button:hover {
+    opacity: 0.8;
+}
+
+.search-form_search-button:disabled {
+    background-color: #D9D9D9;
+}
+
+.git-repo-card {
+    border: 1px solid #D9D9D9;
+    border-radius: 6px;
+    padding: 12px;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+}
+
+.git-repo-card:hover {
+    box-shadow: 0 2px 6px 0 #B6B6B6;
+    cursor: pointer;
+}
+
+.avatar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80px;
+    height: 80px;
+    font-size: 40px;
+    color: #FFFFFF;
+    background-color: #FF5555;
+    border-radius: 50%;
+    margin-right: 12px;
+}
+
+.git-repo-card_info {}
+
+.git-repo-card_info_title {
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.git-repo-card_info_link {
+    font-size: 14px;
+    color: #7E7E7E;
+    text-decoration: none;
+}
+
+.git-repo-card_info_link:hover {
+    color: #208FBF;
+    cursor: pointer;
+}
+
+.rating {}
+
+.rating_star {
+    width: 13px;
+    height: 13px;
+    vertical-align: center;
+    margin-right: 6px;
+}
+
+.rating_voice {
+    display: inline-block;
+    margin-right: 6px;
+    color: #7E7E7E;
+}
+
+.rating_update {
+    display: inline-block;
+    color: #7E7E7E;
+}
