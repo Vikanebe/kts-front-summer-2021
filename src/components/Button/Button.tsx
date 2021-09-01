@@ -1,17 +1,21 @@
 import React from "react";
 
-import { Button } from "antd";
-import "antd/dist/antd.css";
+import "./Button.css";
 
-type ButtonT = {
-  onClick?: () => void;
-  children: string;
+export type ButtonProps = {
+  onClick?: (e: React.MouseEvent) => void;
+  children: React.ReactNode;
+  disabled?: boolean;
 };
 
-const ButtonC = ({ onClick, children }: ButtonT): JSX.Element => (
-  <Button type="primary" onClick={onClick}>
+const Button: React.FC<ButtonProps> = ({
+  onClick,
+  children,
+  disabled,
+}): JSX.Element => (
+  <button onClick={onClick} disabled={disabled} className="button">
     {children}
-  </Button>
+  </button>
 );
 
-export default ButtonC;
+export default Button;

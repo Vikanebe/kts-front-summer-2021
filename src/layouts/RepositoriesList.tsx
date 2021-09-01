@@ -1,7 +1,10 @@
 import React from "react";
 
 import "./RepositoriesList.css";
-import ButtonC from "@components/Button";
+
+import Button from "@components/Button";
+import SearchIcon from "@components/SearchIcon";
+import StarIcon from "@components/StarIcon";
 
 const RepositoriesList = () => (
   <div className="repositories-list">
@@ -65,7 +68,11 @@ const RepositoriesList = () => (
         </div>
       </div>
     </div>
-    <ButtonC>Привет</ButtonC>
+    <Button>
+      <SearchIcon />
+    </Button>
+
+    <StarIcon />
   </div>
 );
 

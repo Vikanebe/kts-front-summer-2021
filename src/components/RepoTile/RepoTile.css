@@ -1,0 +1,39 @@
+.repoTile_info_name {
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.repoTile_info-link {
+    font-size: 14px;
+    color: #7E7E7E;
+    text-decoration: none;
+}
+
+.repoTile_info-link:hover {
+    color: #208FBF;
+    cursor: pointer;
+}
+
+.repoTile_info_rating {}
+
+.rating_info_star {
+    width: 13px;
+    height: 13px;
+    vertical-align: center;
+    margin-right: 6px;
+}
+
+.repoTile_info_rating_voice {
+    display: inline-block;
+    margin-right: 6px;
+    color: #7E7E7E;
+}
+
+.repoTile_info_rating_update {
+    display: inline-block;
+    color: #7E7E7E;
+}
+
+.repoTile_avatar{
+
+}
