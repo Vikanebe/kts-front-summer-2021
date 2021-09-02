@@ -1,15 +1,10 @@
 import React from "react";
 
-import { RepositoriesList } from "./layouts/RepositoriesList";
-
 import "./App.css";
+import RepoSearchPage from "./pages/RepoSearchPage";
 
 const App = () => {
-  return (
-    <div>
-      <RepositoriesList />
-    </div>
-  );
+  return <RepoSearchPage />;
 };
 
 export default App;

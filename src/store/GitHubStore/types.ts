@@ -18,7 +18,7 @@ export type ApiResp<ReqT> =
 
 export type GitHubRpoOwner = {
   id: number;
-  url: string;
+  html_url: string;
   avatar_url: string;
   login: string;
 };
