@@ -4,6 +4,11 @@ export type GetOrganizationReposListParams = {
   organizationName: string;
 };
 
+export type GetReposBranchesListParams = {
+  ownerName: string;
+  repoName: string;
+};
+
 export type ApiResp<ReqT> =
   | {
       success: true;
@@ -32,8 +37,17 @@ export type RepoItem = {
   owner: GitHubRpoOwner;
 };
 
+export type BranchItem = {
+  id: number;
+  name: string;
+};
+
 export interface IGitHubStore {
   getOrganizationReposList(
     params: GetOrganizationReposListParams
   ): Promise<ApiResp<RepoItem[]>>;
+
+  getReposBranchesList(
+    params: GetReposBranchesListParams
+  ): Promise<ApiResp<BranchItem[]>>;
 }

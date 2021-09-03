@@ -9,6 +9,7 @@ import { Layout, Row } from "antd";
 
 import GitHubStore from "../../store/GitHubStore";
 import { ApiResp, RepoItem } from "../../store/GitHubStore/types";
+import RepoBranchesDrawer from "./RepoBranchesDrawer";
 
 const { Content } = Layout;
 const gitHubStore = new GitHubStore();
@@ -17,6 +18,8 @@ const RepoSearchPage = (): JSX.Element => {
   const [repoList, setRepoList] = useState<RepoItem[]>([]);
   const [isLoading, setIsLoading] = useState<boolean>(false);
   const [currentValue, setCurrentValue] = useState<string>("");
+  const [currentRepo, setCurrentRepo] = useState<RepoItem | null>(null);
+  const [visibleDrawer, setVisibleDrawer] = useState<boolean>(false);
 
   const getRepo = () => {
     if (currentValue.length) {
@@ -37,6 +40,19 @@ const RepoSearchPage = (): JSX.Element => {
     setCurrentValue(value);
   };
 
+  const showDrawer = () => {
+    setVisibleDrawer(true);
+  };
+
+  const onClose = () => {
+    setVisibleDrawer(false);
+  };
+
+  const getRepoBranches = (repo: RepoItem): void => {
+    setCurrentRepo(repo);
+    showDrawer();
+  };
+
   const getRepoTileJXS = () => {
     if (isLoading) return <div>...Loading</div>;
     if (!isLoading && !repoList.length) return;
@@ -44,7 +60,7 @@ const RepoSearchPage = (): JSX.Element => {
       return (
         <React.Fragment key={repo.id}>
           <Row justify="space-between" align="middle">
-            <RepoTile RepoItem={repo} onClick={() => {}} />
+            <RepoTile RepoItem={repo} onClick={() => getRepoBranches(repo)} />
           </Row>
         </React.Fragment>
       );
@@ -73,6 +89,11 @@ const RepoSearchPage = (): JSX.Element => {
         </Button>
       </Row>
       {getRepoTileJXS()}
+      <RepoBranchesDrawer
+        selectedRepo={currentRepo}
+        onClose={onClose}
+        visible={visibleDrawer}
+      />
     </Content>
   );
 };

@@ -15,4 +15,4 @@ const SearchIcon = (): JSX.Element => (
   </svg>
 );
 
-export default SearchIcon;
+export default React.memo(SearchIcon);

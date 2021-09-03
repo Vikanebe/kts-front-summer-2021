@@ -14,4 +14,4 @@ const Avatar: React.FC<AvatarProps> = ({ src, alt, letter }): JSX.Element => (
   </div>
 );
 
-export default Avatar;
+export default React.memo(Avatar);

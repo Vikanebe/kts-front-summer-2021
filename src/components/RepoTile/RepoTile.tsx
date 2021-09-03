@@ -41,4 +41,4 @@ const RepoTile: React.FC<RepoTileProps> = ({
   </div>
 );
 
-export default RepoTile;
+export default React.memo(RepoTile);
