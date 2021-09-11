@@ -1,6 +1,6 @@
 import React from "react";
 
-import "./RepoTile.css";
+import "./RepoTile.scss";
 
 import Avatar from "@components/Avatar";
 import StarIcon from "@components/StarIcon";

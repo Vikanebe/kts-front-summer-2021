@@ -1,6 +1,6 @@
 import React from "react";
 
-import "./Input.css";
+import "./Input.scss";
 
 type InputProps = {
   placeholder?: string;

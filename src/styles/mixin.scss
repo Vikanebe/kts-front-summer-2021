@@ -1,0 +1,21 @@
+@mixin square($size, $border-radius: none) {
+  width: $size;
+  height: $size;
+
+  @if ($border-radius != none) {
+    border-radius: $border-radius;
+  }
+}
+
+
+@mixin rectangle ($width, $height, $border-radius: none) {
+  width: $width;
+  height: $height;
+
+  @if ($border-radius != none) {
+    border-radius: $border-radius;
+  }
+}
+
+
+
