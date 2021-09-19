@@ -1,0 +1,20 @@
+@import "../../styles/colors";
+@import "../../styles/mixin";
+
+.input {
+  @include rectangle(300px, 50px, 6px);
+    box-sizing: border-box;
+    outline: none;
+    weight: 400;
+    size: 14px;
+    padding: 17px 12px;
+    border: 1px solid $gray;
+}
+
+.input:focus {
+    border: 1px solid $light-red;
+}
+
+.input:disabled {
+    border: 1px solid $light-gray;
+}

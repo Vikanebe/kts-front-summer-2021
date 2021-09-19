@@ -1,0 +1,18 @@
+@import "../../styles/colors";
+@import "../../styles/mixin";
+
+.avatar {
+  @include square(80px, 50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 40px;
+    color: $white;
+    background-color: $light-red;
+    margin-right: 12px;
+
+  &_img {
+    @include square(100%, 50%);
+  }
+}
+
