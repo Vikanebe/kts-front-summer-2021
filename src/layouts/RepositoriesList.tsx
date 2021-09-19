@@ -1,6 +1,10 @@
-import React from 'react';
+import React from "react";
 
-import './RepositoriesList.css';
+import "./RepositoriesList.css";
+
+import Button from "@components/Button";
+import SearchIcon from "@components/SearchIcon";
+import StarIcon from "@components/StarIcon";
 
 const RepositoriesList = () => (
   <div className="repositories-list">
@@ -12,7 +16,7 @@ const RepositoriesList = () => (
           placeholder="Введите название организации"
         />
         <div className="search-form_search-button">
-          <img src="img/search.svg"/>
+          <img src="img/search.svg" />
         </div>
       </form>
 
@@ -20,12 +24,12 @@ const RepositoriesList = () => (
         <div className="avatar">K</div>
 
         <div className="git-repo-card_info">
-          <div className="git-repo-card_info_title">
-            kts-school-frontend
-          </div>
-          <a className="git-repo-card_info_link" href="">ktsStudio</a>
+          <div className="git-repo-card_info_title">kts-school-frontend</div>
+          <a className="git-repo-card_info_link" href="">
+            ktsStudio
+          </a>
           <div className="rating">
-            <img src="img/star.svg" className="rating_star"/>
+            <img src="img/star.svg" className="rating_star" />
             <div className="rating_voice">123</div>
             <div className="rating_update">Updating 21June</div>
           </div>
@@ -36,12 +40,12 @@ const RepositoriesList = () => (
         <div className="avatar">K</div>
 
         <div className="git-repo-card_info">
-          <div className="git-repo-card_info_title">
-            kts-school-frontend
-          </div>
-          <a className="git-repo-card_info_link" href="">ktsStudio</a>
+          <div className="git-repo-card_info_title">kts-school-frontend</div>
+          <a className="git-repo-card_info_link" href="">
+            ktsStudio
+          </a>
           <div className="rating">
-            <img src="img/star.svg" className="rating_star"/>
+            <img src="img/star.svg" className="rating_star" />
             <div className="rating_voice">123</div>
             <div className="rating_update">Updating 21June</div>
           </div>
@@ -52,19 +56,24 @@ const RepositoriesList = () => (
         <div className="avatar">K</div>
 
         <div className="git-repo-card_info">
-          <div className="git-repo-card_info_title">
-            kts-school-frontend
-          </div>
-          <a className="git-repo-card_info_link" href="">ktsStudio</a>
+          <div className="git-repo-card_info_title">kts-school-frontend</div>
+          <a className="git-repo-card_info_link" href="">
+            ktsStudio
+          </a>
           <div className="rating">
-            <img src="img/star.svg" className="rating_star"/>
+            <img src="img/star.svg" className="rating_star" />
             <div className="rating_voice">123</div>
             <div className="rating_update">Updating 21June</div>
           </div>
         </div>
       </div>
     </div>
-  </div>
-)
+    <Button>
+      <SearchIcon />
+    </Button>
 
-export {RepositoriesList};
+    <StarIcon />
+  </div>
+);
+
+export { RepositoriesList };
